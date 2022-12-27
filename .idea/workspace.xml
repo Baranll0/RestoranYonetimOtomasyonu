@@ -2,36 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47bd6f03-447c-45ae-8d13-4cb8185bc1a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RestoranYonetimOtomasyonu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/AbstractDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/MainDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAO/PersonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Calisan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Junior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Kisi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Musteri.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Odeme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/OnlineOdeme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Personel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/RestoranSiparis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Rezervasyon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Senior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entitiy/Siparis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/LoginGui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/PersonelGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/RegisterGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/RezervasyonGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/RezervasyonSiparisGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/SiparisGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/YoneticiLoginGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/guiTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/guiToolAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/LoginGuiAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/PersonelGUIAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/RegisterGUIAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/RezervasyonGUIAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/RezervasyonSiparisGUIAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/SiparisGUIAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/YoneticiLoginGUIAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person" beforeDir="false" afterPath="$PROJECT_DIR$/Person" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Personel" beforeDir="false" afterPath="$PROJECT_DIR$/Personel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonelManager" beforeDir="false" afterPath="$PROJECT_DIR$/PersonelManager" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Siparis" beforeDir="false" afterPath="$PROJECT_DIR$/Siparis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yonetici" beforeDir="false" afterPath="$PROJECT_DIR$/Yonetici" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/MainDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/MainDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entitiy/Junior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entitiy/Junior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entitiy/Personel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entitiy/Personel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entitiy/Rezervasyon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entitiy/Rezervasyon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entitiy/Senior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entitiy/Senior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entitiy/Siparis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entitiy/Siparis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/LoginGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/PersonelGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/PersonelGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RegisterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RegisterGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RezervasyonGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RezervasyonGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RezervasyonSiparisGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RezervasyonSiparisGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/SiparisGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/SiparisGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/YoneticiLoginGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/YoneticiLoginGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/guiToolAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/guiToolAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/gbara/OneDrive/Masaüstü/RestoranYonetimOtomasyonu"
   }
 }]]></component>
   <component name="RunManager">
@@ -99,5 +99,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="e.source" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

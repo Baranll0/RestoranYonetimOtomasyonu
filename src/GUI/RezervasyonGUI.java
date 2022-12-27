@@ -46,7 +46,7 @@ public class RezervasyonGUI{
         this.getPanel().add(this.getEmailLabel());
         this.getPanel().add(this.getEmailField());
         this.getPanel().add(this.getRezervasyonEkle());
-        this.getRezervasyonEkle().addActionListener(new guiToolAction(this));
+        this.getRezervasyonEkle().addActionListener(new RezervasyonGUIAction(this));
         this.getPanel().add(this.getMasa());
         this.getPanel().add(this.getFotografEtiketi());
         this.getWindow().setLayout(null);

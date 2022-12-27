@@ -8,8 +8,8 @@ public class MainDAO extends AbstractDAO{
         super.Save(ad,username,password,mail);
     }
     @Override
-    public int getData(String fileName,String username,String password) {
-        return super.getData(fileName,username,password);
+    public int getData(int a,String username,String password) {
+        return super.getData(a,username,password);
     }
 }
 

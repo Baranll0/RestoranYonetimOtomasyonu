@@ -82,7 +82,7 @@ public class RegisterGUI{
             girisYap=new JButton("Giris Yap");
             girisYap.setBounds(230,350,100,20);
             girisYap.setFont(new Font("Arial",Font.BOLD,12));
-            this.girisYap.addActionListener(new guiToolAction(this));
+            this.girisYap.addActionListener(new RegisterGUIAction(this));
         }
         return girisYap;
     }
@@ -96,7 +96,7 @@ public class RegisterGUI{
         {
             kayitOl=new JButton("Kayit ol");
             kayitOl.setBounds(400,350,100,20);
-            this.getKayitOl().addActionListener(new guiToolAction(this));
+            this.getKayitOl().addActionListener(new RegisterGUIAction(this));
         }
         return kayitOl;
     }

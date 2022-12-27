@@ -10,12 +10,11 @@ public class Siparis implements Odeme,Serializable {
     private Date siparisTarihi;
     private String siparisDetay;
     private String ekstraNot;
-    public Siparis() {
-        this.siparisID=count.incrementAndGet();
-        this.siparisTarihi=new Date();
-        this.siparisDetay="DetayYok";
-        this.ekstraNot="Not yok";
-    }
+    Musteri musteri;//Composition
+    //Burada Composition olduğundan
+    //Sipariş sınıfının boş constructoru olmamalı
+    //Bu yüzden Müşteri olmadan Sipariş sınıfı var olamayacaktır.
+
     public Siparis(int siparisID, Date siparisTarihi, String siparisDetay, String ekstraNot) {
         this.siparisID = siparisID;
         this.siparisTarihi = siparisTarihi;

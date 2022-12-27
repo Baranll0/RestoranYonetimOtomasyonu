@@ -117,7 +117,7 @@ public class PersonelGUI {
         {
             girisYap=new JButton("Giris Yap");
             girisYap.setBounds(70,350,100,20);
-            this.getGirisYap().addActionListener(new guiToolAction(this));
+            this.getGirisYap().addActionListener(new PersonelGUIAction(this));
         }
         return girisYap;
     }
@@ -291,7 +291,7 @@ public class PersonelGUI {
         {
             this.musteriEkle=new JButton("Müşteri Ekle");
             this.musteriEkle.setBounds(350,250,150,30);
-            this.musteriEkle.addActionListener(new guiToolAction(this));
+            this.musteriEkle.addActionListener(new PersonelGUIAction(this));
         }
         return musteriEkle;
     }

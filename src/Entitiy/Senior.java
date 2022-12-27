@@ -6,6 +6,15 @@ import java.util.Date;
 
 public class Senior extends Personel implements Serializable {
     private int yillikMaas;
+    Junior junior;//Aggregation
+    //Burada Aggregation olduğundan
+    //Senior sınıfının boş bir constructor u bulunmalı
+    //Dolayısıyla Junior olmadan Senior varlığını kaybetmez.
+
+    public Senior()
+    {
+
+    }
     private ArrayList<Junior>sorumlu;
     public Senior(Date baslangicTarihi,int yillikMaas)
     {

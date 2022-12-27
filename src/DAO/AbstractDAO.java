@@ -258,12 +258,10 @@ public class AbstractDAO {
         return 0;
 
     }
-    public int getData(String fileName,String username,String password)
+    public int getData(int a,String username,String password)
     {
-        LoginGui loginGui=new LoginGui();
-        File file=new File(fileName);
         try {
-            FileReader fileReader=new FileReader(file);
+            FileReader fileReader=new FileReader(".\\Person");
             BufferedReader reader=new BufferedReader(fileReader);
             String line;
             int i=0;
@@ -274,6 +272,7 @@ public class AbstractDAO {
                 String user=bilgiler[2];
                 String sifre=bilgiler[3];
                 String mail=bilgiler[4];
+                System.out.println(user+password);
                 if (user.equals(username)&&sifre.equals(password))
                 {
                     return 1;
@@ -284,7 +283,9 @@ public class AbstractDAO {
         }catch (Exception e)
         {
             e.printStackTrace();
+
         }
+
         return 0;
     }
     public int getData(String filename,String masaNo)

@@ -60,7 +60,7 @@ public class YoneticiLoginGUI {
         {
             girisYap=new JButton("Giris Yap");
             girisYap.setBounds(70,350,100,20);
-            this.getGirisYap().addActionListener(new guiToolAction(this));
+            this.getGirisYap().addActionListener(new YoneticiLoginGUIAction(this));
         }
         return girisYap;
     }

@@ -15,6 +15,11 @@ public class Personel extends Kisi implements Calisan, Serializable {
         super(name,cinsiyet,dogumTarihi,ID);
         this.baslangicTarihi=baslangicTarihi;
     }
+
+    public Personel() {
+
+    }
+
     public Date getBaslangicTarihi()
     {
         return baslangicTarihi;

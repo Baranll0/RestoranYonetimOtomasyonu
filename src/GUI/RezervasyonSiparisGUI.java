@@ -81,7 +81,7 @@ public class RezervasyonSiparisGUI {
         {
             this.searchButton=new JButton("Masa ara");
             this.searchButton.setBounds(260,50,150,30);
-            this.searchButton.addActionListener(new guiToolAction(this));
+            this.searchButton.addActionListener(new RezervasyonSiparisGUIAction(this));
         }
         return searchButton;
     }
@@ -151,7 +151,7 @@ public class RezervasyonSiparisGUI {
         {
             this.button=new JButton("Rezervasyona Sipariş Ekle");
             this.button.setBounds(410,320,200,30);
-            this.button.addActionListener(new guiToolAction(this));
+            this.button.addActionListener(new RezervasyonSiparisGUIAction(this));
         }
         return button;
     }

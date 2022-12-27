@@ -10,6 +10,10 @@ public class Rezervasyon implements Serializable {
     private Date rezervasyonTarihi;
     private int rezervasyonID;
     private ArrayList<RestoranSiparis> restSiparis;
+    Musteri musteri=new Musteri();//Aggregation
+    //Burada aggregation olduğundan dolayı
+    //Rezervasyon sınıfının boş bir constructoru bulunmalı
+    //Dolayısıyla müşteri olmadan rezervasyon sınıfı var olabilir.
     public Rezervasyon()
     {
         this.rezervasyonTarihi=new Date();

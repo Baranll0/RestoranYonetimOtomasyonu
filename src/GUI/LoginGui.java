@@ -65,7 +65,7 @@ public class LoginGui{
             girisYap=new JButton("Giriş Yap");
             girisYap.setBounds(280,350,100,20);
             girisYap.setFont(new Font("Arial",Font.BOLD,12));
-            this.getGirisYap().addActionListener(new guiToolAction(this));
+            this.getGirisYap().addActionListener(new LoginGuiAction(this));
 
         }
         return girisYap;
@@ -79,7 +79,7 @@ public class LoginGui{
             kayitOl=new JButton("Kayit ol");
             kayitOl.setBounds(450,350,100,20);
 
-            this.getKayitOl().addActionListener(new guiToolAction(this));
+            this.getKayitOl().addActionListener(new LoginGuiAction(this));
         }
         return kayitOl;
     }

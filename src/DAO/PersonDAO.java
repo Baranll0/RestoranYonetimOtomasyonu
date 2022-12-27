@@ -27,7 +27,6 @@ public class PersonDAO extends MainDAO{
     public void build(String username,String password)
     {
         AbstractDAO abstractDAO=new AbstractDAO();
-        abstractDAO.getData(".\\Person",username,password);
     }
     public void build(RegisterGUI registerGUI){
 
@@ -61,7 +60,7 @@ public class PersonDAO extends MainDAO{
     public void buildGetData()
     {
         AbstractDAO abstractDAO=new AbstractDAO();
-        abstractDAO.getData(".\\person",getRegisterGUI().getUserT().getText(),getRegisterGUI().getPasswordT().getText());
+
     }
     public RegisterGUI getRegisterGUI() {
         if (this.registerGUI==null)
@@ -78,7 +77,7 @@ public class PersonDAO extends MainDAO{
     public guiToolAction getGui() {
         if (this.gui==null)
         {
-            gui=new guiToolAction(getRegisterGUI());
+            gui=new guiToolAction();
         }
         return gui;
     }

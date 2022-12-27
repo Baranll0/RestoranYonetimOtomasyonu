@@ -86,7 +86,7 @@ public class SiparisGUI{
 
     public SiparisGUI()
     {
-        build();
+
     }
     public void build()
     {
@@ -116,7 +116,8 @@ public class SiparisGUI{
         this.getScrollPane().setViewportView(getYemeklerpaneli());
         this.getWindow().setLayout(null);
         this.getWindow().setContentPane(this.getPanel());
-        this.getWindow().setVisible(false);
+
+
     }
 
     public ImageIcon getImage4() {
@@ -543,7 +544,7 @@ public class SiparisGUI{
         {
             this.Siparisekle=new JButton("Sipariş Ekle");
             this.Siparisekle.setBounds(600,470,130,30);
-            this.getSiparisekle().addActionListener(new guiToolAction(this));
+            this.getSiparisekle().addActionListener(new SiparisGUIAction(this));
         }
         return Siparisekle;
     }

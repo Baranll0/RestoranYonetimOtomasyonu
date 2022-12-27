@@ -2,8 +2,8 @@ package GUI;
 
 import DAO.AbstractDAO;
 import DAO.PersonDAO;
-
 import javax.print.attribute.standard.NumberUp;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,35 +12,22 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class guiToolAction implements ActionListener {
-    guiTool gui;
+    private guiTool gui;
     private AbstractDAO abstractDAO;
+    private PersonelGUI personelGUI;
     private YoneticiLoginGUI yoneticiLoginGUI;
-    int id=0;
-    private LoginGui loginGui;
-    private RegisterGUI registerGUI;
+
     private SiparisGUI siparisGUI;
     private PersonDAO personDAO;
     private RezervasyonGUI rezervasyonGUI;
     private RezervasyonSiparisGUI rezervasyonSiparisGUI;
-    private PersonelGUI personelGUI;
+
 
     public guiToolAction()
     {
 
     }
-    public guiToolAction(YoneticiLoginGUI yoneticiLoginGUI){this.yoneticiLoginGUI=yoneticiLoginGUI;}
-    public guiToolAction(PersonelGUI personelGUI){this.personelGUI=personelGUI;}
-    public guiToolAction(RezervasyonSiparisGUI rezervasyonSiparisGUI){this.rezervasyonSiparisGUI=rezervasyonSiparisGUI;}
-    public guiToolAction(RezervasyonGUI rezervasyonGUI){this.rezervasyonGUI=rezervasyonGUI;}
-    public guiToolAction(SiparisGUI siparisGUI){ this.siparisGUI=siparisGUI;}
-    public guiToolAction(LoginGui loginGui)
-    {
-        this.loginGui=loginGui;
-    }
-    public guiToolAction(RegisterGUI registerGUI)
-    {
-        this.registerGUI=registerGUI;
-    }
+
     public guiToolAction(guiTool gui)
     {
         this.gui=gui;
@@ -48,63 +35,11 @@ public class guiToolAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == getLoginGui().getKayitOl()) {
-            System.out.println("kyt");
-            getRegisterGUI().getWindow().setContentPane(getRegisterGUI().getPanel());
-            getRegisterGUI().getWindow().setVisible(true);
-        }
-        else if (e.getSource() == getLoginGui().getGirisYap()) {
-
-            if (getPersonDAO().getData(".\\Person", getLoginGui().getUserT().getText(), getLoginGui().getPasswordT().getText()) == 1) {
-                System.out.println("log basarili");
-                getGui().getWindow().setContentPane(getGui().getPanel());
-                getGui().getWindow().setVisible(true);
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null,"Parola yanlis");
-            }
-        }
-        else if(e.getSource()==getRegisterGUI().getGirisYap())
+        if (e.getSource()==getGui().getSiparis())
         {
-            System.out.println("logine yonlendirildi");
-            getLoginGui().getWindow().setContentPane(getLoginGui().getPanel());
-            getLoginGui().getWindow().setVisible(true);
-        }
-        else if (e.getSource()==getRegisterGUI().getKayitOl())
-        {
-            id=id+1;
-            System.out.println("kayıt olundu");
-            getPersonDAO().build(getRegisterGUI());
-        }
-        else if (e.getSource()==getGui().getSiparis())
-        {
-            System.out.println("siparis ekrani geldi");
             getSiparisGUI().getWindow().setContentPane(getSiparisGUI().getPanel());
             getSiparisGUI().getWindow().setVisible(true);
-
-        }
-        else if (e.getSource()==getSiparisGUI().getSiparisekle())
-        {
-
-            if (getSiparisGUI().getYemekSecimiCheckbox().isSelected())
-            {
-                getPersonDAO().build(getSiparisGUI().getYemekismiEtiketi1().getText().trim(),getSiparisGUI().getYemekfiyatiEtiketi1().getText().trim(), String.valueOf(getSiparisGUI().getAdetSecimi().getSelectedIndex()));
-            }
-            if(getSiparisGUI().getYemekSecimiCheckbox2().isSelected())
-            {
-                getPersonDAO().build(getSiparisGUI().getYemekismiEtiketi2().getText().trim(),getSiparisGUI().getYemekfiyatiEtiketi2().getText().trim(), String.valueOf(getSiparisGUI().getAdetSecimi2().getSelectedIndex()));
-            }
-            if(getSiparisGUI().getYemekSecimiCheckbox3().isSelected())
-            {
-                getPersonDAO().build(getSiparisGUI().getYemekismiEtiketi3().getText().trim(),getSiparisGUI().getYemekfiyatiEtiketi3().getText().trim(), String.valueOf(getSiparisGUI().getAdetSecimi3().getSelectedIndex()));
-            }
-            if (getSiparisGUI().getYemekSecimiCheckbox3().isSelected())
-            {
-                getPersonDAO().build(getSiparisGUI().getYemekismiEtiketi4().getText().trim(),getSiparisGUI().getYemekfiyatiEtiketi4().getText().trim(), String.valueOf(getSiparisGUI().getAdetSecimi4().getSelectedIndex()));
-            }
-            getSiparisGUI().getWindow().setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            getSiparisGUI().getWindow().setVisible(false);
+            System.out.println("siparis ekrani geldi");
 
         }
         else if (e.getSource()==getGui().getRezervasyon())
@@ -112,84 +47,17 @@ public class guiToolAction implements ActionListener {
             getRezervasyonGUI().getWindow().setContentPane(getRezervasyonGUI().getPanel());
             getRezervasyonGUI().getWindow().setVisible(true);
         }
-        else if (e.getSource()==getRezervasyonGUI().getRezervasyonEkle())
-        {
-            int select=-1;
-            for (int i=0;i<getRezervasyonGUI().getTableNumbers().length;i++)
-            {
-                if (getRezervasyonGUI().getTableNumbers()[i].isSelected())
-                {
-                    select=i+1;
-                    break;
-                }
-            }
-            getPersonDAO().build(String.valueOf(select),getRezervasyonGUI().getNameField().getText(),getRezervasyonGUI().getTelefonField().getText(),getRezervasyonGUI().getEmailField().getText(),"m");
-            JOptionPane.showMessageDialog(null,"Rezervasyonunuz yapıldı!","Bizi tercih ettiğiniz için teşekkürler!",JOptionPane.INFORMATION_MESSAGE);
-
-            getRezervasyonGUI().getWindow().setVisible(false);
-        }
         else if (e.getSource()==getGui().getRezervasyonSiparis())
         {
             System.out.println("Girildi");
-            getRezervasyonSiparisGUI().getWindow().setContentPane(getRezervasyonSiparisGUI().getPanel());
-            getRezervasyonSiparisGUI().getWindow().setVisible(true);
-        }
-        else if (e.getSource()==getRezervasyonSiparisGUI().getSearchButton())
-        {
-            if (getAbstractDAO().getData("Rezervasyon",getRezervasyonSiparisGUI().getSearchField().getText())==1)
-            {
-                JOptionPane.showMessageDialog(null,"Masa no bulundu.Sipariş veriniz.");
-
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null,"Masa No Yanlış girdiniz!");
-            }
-            getRezervasyonSiparisGUI().getWindow().setContentPane(getRezervasyonSiparisGUI().getPanel());
-            getRezervasyonSiparisGUI().getWindow().setVisible(true);
-
-        }
-        else if (e.getSource()==getRezervasyonSiparisGUI().getButton())
-        {
-            JOptionPane.showMessageDialog(null,"Siparişiniz Onaylandı.","Bizi tercih ettiğiniz için teşekkürler!",JOptionPane.INFORMATION_MESSAGE);
-            getRezervasyonSiparisGUI().getWindow().setVisible(false);
+            getRezervasyonSiparisGUI().getWindow().setVisible(true
+            );
         }
         else if (e.getSource()==getGui().getMusteriEkle())
         {
             JOptionPane.showMessageDialog(null,"Personel Giriş Sayfasına Yönlendiriliyorsunuz...(username=admin,password=personel)(Sadece ödev için bu bilgi verilir.)");
             getPersonelGUI().getWindow().setContentPane(getPersonelGUI().getPanel());
             getPersonelGUI().getWindow().setVisible(true);
-        }
-        else if (e.getSource()==getPersonelGUI().getGirisYap())
-        {
-            try {
-                getAbstractDAO().Save(getPersonelGUI().getUserT().getText(),getPersonelGUI().getPasswordT().getText());
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-            if (getAbstractDAO().getData(getPersonelGUI().getUserT().getText(),getPersonelGUI().getPasswordT().getText(),1)==1)
-            {
-                getPersonelGUI().getAsilWindow().setContentPane(getPersonelGUI().getAsilPanel());
-                getPersonelGUI().getAsilWindow().setVisible(true);
-                getPersonelGUI().build2();
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null,"Giris basarisiz!.");
-                getPersonelGUI().getWindow().setVisible(false);
-            }
-
-        }
-        else if (e.getSource()==getPersonelGUI().getMusteriEkle())
-        {
-            try {
-                getAbstractDAO().Save(getPersonelGUI().getAdSoyadT().getText(),getPersonelGUI().getUsT().getText(),getPersonelGUI().getPassT().getText(),getPersonelGUI().getMailT().getText());
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-            JOptionPane.showMessageDialog(null,"Müşteri eklendi!");
-            getPersonelGUI().getAsilWindow().setVisible(false);
-            getPersonelGUI().getWindow().setVisible(false);
         }
         else if (e.getSource()==getGui().getMusteriSil())
         {
@@ -218,32 +86,7 @@ public class guiToolAction implements ActionListener {
         else if (e.getSource()==getGui().getPersonelEkle())
         {
             JOptionPane.showMessageDialog(null,"Yönetici Giriş Sayfasına Yönlendiriliyorsunuz...(username=admin,password=yonetici)(Sadece ödev için bu bilgi verilir.)");
-            getYoneticiLoginGUI().getWindow().setContentPane(getYoneticiLoginGUI().getPanel());
-            getYoneticiLoginGUI().getWindow().setVisible(true);
-        }
-        else if(e.getSource()==getYoneticiLoginGUI().getGirisYap())
-        {
-            try {
-                getAbstractDAO().save(getYoneticiLoginGUI().getUserT().getText(),getYoneticiLoginGUI().getPasswordT().getText());
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-            if (getAbstractDAO().getdata(getYoneticiLoginGUI().getUserT().getText(),getYoneticiLoginGUI().getPasswordT().getText())==1)
-            {
-                String personelName=JOptionPane.showInputDialog(null,"Personel Adı Soyadı","Personel Ekleme Sayfası",JOptionPane.QUESTION_MESSAGE);
-                String personelMaasi=JOptionPane.showInputDialog(null,"Personel Maaşı: ","Personel Ekleme Sayfası",JOptionPane.QUESTION_MESSAGE);
-                try {
-                    getAbstractDAO().saveManager(personelName,personelMaasi);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-                JOptionPane.showMessageDialog(null,"Personel Eklendi...");
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null,"Giris basarisiz!.");
-                getPersonelGUI().getWindow().setVisible(false);
-            }
+            getPersonelGUI().getWindow().setVisible(true);
         }
         else if (e.getSource()==getGui().getPersonelSil())
         {
@@ -262,9 +105,7 @@ public class guiToolAction implements ActionListener {
                 sb.append(s).append("\n");
             }
             JOptionPane.showMessageDialog(null, sb.toString(), "Personeller: ", JOptionPane.INFORMATION_MESSAGE);
-
         }
-
     }
     public guiTool getGui() {
         if (this.gui==null)
@@ -279,34 +120,11 @@ public class guiToolAction implements ActionListener {
     }
 
 
-    public LoginGui getLoginGui() {
-        if (this.loginGui==null)
-        {
-            this.loginGui=new LoginGui();
-        }
-        return loginGui;
-    }
-
-    public void setLoginGui(LoginGui loginGui) {
-        this.loginGui = loginGui;
-    }
-
-    public RegisterGUI getRegisterGUI() {
-        if (this.registerGUI==null)
-        {
-            this.registerGUI=new RegisterGUI();
-        }
-        return this.registerGUI;
-    }
-
-    public void setRegisterGUI(RegisterGUI registerGUI) {
-        this.registerGUI = registerGUI;
-    }
 
     public PersonDAO getPersonDAO() {
         if (this.personDAO==null)
         {
-            this.personDAO=new PersonDAO(getLoginGui());
+            this.personDAO=new PersonDAO();
         }
         return personDAO;
     }
@@ -331,6 +149,7 @@ public class guiToolAction implements ActionListener {
         if (this.siparisGUI==null)
         {
             this.siparisGUI=new SiparisGUI();
+            this.siparisGUI.build();
         }
         return siparisGUI;
     }

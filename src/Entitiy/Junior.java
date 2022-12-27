@@ -4,7 +4,13 @@ import java.util.Date;
 
 public class Junior extends Personel implements Serializable {
     private float aylikMaas;
-    private Musteri musteri; //aggragetion
+    private Musteri musteri; //aggregation olduğundan dolayı
+    //boş bir constructor olmalı. Yani Müşteri olmadan
+    //Junior yine de var olabilir.
+    public Junior()
+    {
+        super();
+    }
     private Date cikisTarihi;
     public Junior(Date baslangicTarihi,float aylikMaas,Date cikisTarihi)
     {
