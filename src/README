@@ -1,0 +1,13 @@
+Single Responsibility Principle(Tek sorumluluk İlkesi):
+     Her nesne yalnızca bir tek görevi yerine getirmelidir.
+Open-Closed Principle (Açık-Kapalı İlkesi): Bir nesnenin içindeki
+    özelliklerinin değiştirilmemesi gerekirken, nesnenin davranışının
+    değiştirilebilmesi gerekir.
+Liskov Substituiton Principle:Bir sınıf, türetilmiş bir sınıf
+        tarafından yerine geçebilmelidir ancak bu, türetilmiş
+        sınıfın davranışını değiştirmeyecektir.
+Interface Segrgation Principle(Arayüz Ayırım İlkesi):
+    Kullanıcılar için gereksiz arayüzler olmamalıdır.
+Dependency Inversion Principle(Bağımlılık Tersine İlkesi):
+    Önceden bir arayüz belirtilmeli ve bu arayüze kod yazılmalıdır.
+    Böylece değişikliklerin etkisi azaltılabilir.

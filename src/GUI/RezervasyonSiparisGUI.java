@@ -2,6 +2,9 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 public class RezervasyonSiparisGUI {
     private JFrame window;
     private JPanel panel;
@@ -81,6 +84,26 @@ public class RezervasyonSiparisGUI {
         {
             this.searchButton=new JButton("Masa ara");
             this.searchButton.setBounds(260,50,150,30);
+            searchButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            searchButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    searchButton.setBackground(new Color(240, 230, 140));
+                    searchButton.setForeground(new Color(105,105,105));
+                    searchButton.setSize(150,32);
+                    searchButton.setForeground(Color.black);
+                    searchButton.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    searchButton.setBackground(Color.WHITE);
+                    searchButton.setForeground(Color.BLACK);
+                    searchButton.setSize(150,30);
+                    searchButton.setBorderPainted(true);
+
+                }
+            });
             this.searchButton.addActionListener(new RezervasyonSiparisGUIAction(this));
         }
         return searchButton;
@@ -151,6 +174,26 @@ public class RezervasyonSiparisGUI {
         {
             this.button=new JButton("Rezervasyona Sipariş Ekle");
             this.button.setBounds(410,320,200,30);
+            button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            button.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    button.setBackground(new Color(240, 230, 140));
+                    button.setForeground(new Color(105,105,105));
+                    button.setSize(200,32);
+                    button.setForeground(Color.black);
+                    button.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    button.setBackground(Color.WHITE);
+                    button.setForeground(Color.BLACK);
+                    button.setSize(200,30);
+                    button.setBorderPainted(true);
+
+                }
+            });
             this.button.addActionListener(new RezervasyonSiparisGUIAction(this));
         }
         return button;

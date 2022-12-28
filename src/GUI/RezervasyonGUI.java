@@ -2,6 +2,8 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class RezervasyonGUI{
     private JPanel panel;
@@ -183,6 +185,26 @@ public class RezervasyonGUI{
         {
             this.rezervasyonEkle=new JButton("Rezervasyon Ekle");
             this.rezervasyonEkle.setBounds(440,350,150,30);
+            rezervasyonEkle.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            rezervasyonEkle.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    rezervasyonEkle.setBackground(new Color(240, 230, 140));
+                    rezervasyonEkle.setForeground(new Color(105,105,105));
+                    rezervasyonEkle.setSize(150,32);
+                    rezervasyonEkle.setForeground(Color.black);
+                    rezervasyonEkle.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    rezervasyonEkle.setBackground(Color.WHITE);
+                    rezervasyonEkle.setForeground(Color.BLACK);
+                    rezervasyonEkle.setSize(150,30);
+                    rezervasyonEkle.setBorderPainted(true);
+
+                }
+            });
         }
         return rezervasyonEkle;
     }

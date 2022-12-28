@@ -2,6 +2,8 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class YoneticiLoginGUI {
     private JFrame window;
@@ -60,6 +62,26 @@ public class YoneticiLoginGUI {
         {
             girisYap=new JButton("Giris Yap");
             girisYap.setBounds(70,350,100,20);
+            girisYap.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            girisYap.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    girisYap.setBackground(new Color(240, 230, 140));
+                    girisYap.setForeground(new Color(105,105,105));
+                    girisYap.setSize(100,22);
+                    girisYap.setForeground(Color.black);
+                    girisYap.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    girisYap.setBackground(Color.WHITE);
+                    girisYap.setForeground(Color.BLACK);
+                    girisYap.setSize(100,20);
+                    girisYap.setBorderPainted(true);
+
+                }
+            });
             this.getGirisYap().addActionListener(new YoneticiLoginGUIAction(this));
         }
         return girisYap;

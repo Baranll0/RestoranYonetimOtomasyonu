@@ -86,7 +86,7 @@ public class guiToolAction implements ActionListener {
         else if (e.getSource()==getGui().getPersonelEkle())
         {
             JOptionPane.showMessageDialog(null,"Yönetici Giriş Sayfasına Yönlendiriliyorsunuz...(username=admin,password=yonetici)(Sadece ödev için bu bilgi verilir.)");
-            getPersonelGUI().getWindow().setVisible(true);
+            getYoneticiLoginGUI().getWindow().setVisible(true);
         }
         else if (e.getSource()==getGui().getPersonelSil())
         {

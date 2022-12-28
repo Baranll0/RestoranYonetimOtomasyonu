@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 public class PersonelGUI {
     private JFrame window;
     private JPanel panel;
@@ -117,6 +120,26 @@ public class PersonelGUI {
         {
             girisYap=new JButton("Giris Yap");
             girisYap.setBounds(70,350,100,20);
+            girisYap.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            girisYap.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    girisYap.setBackground(new Color(240, 230, 140));
+                    girisYap.setForeground(new Color(105,105,105));
+                    girisYap.setSize(100,22);
+                    girisYap.setForeground(Color.black);
+                    girisYap.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    girisYap.setBackground(Color.WHITE);
+                    girisYap.setForeground(Color.BLACK);
+                    girisYap.setSize(100,20);
+                    girisYap.setBorderPainted(true);
+
+                }
+            });
             this.getGirisYap().addActionListener(new PersonelGUIAction(this));
         }
         return girisYap;
@@ -291,6 +314,26 @@ public class PersonelGUI {
         {
             this.musteriEkle=new JButton("Müşteri Ekle");
             this.musteriEkle.setBounds(350,250,150,30);
+            musteriEkle.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            musteriEkle.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    musteriEkle.setBackground(new Color(240, 230, 140));
+                    musteriEkle.setForeground(new Color(105,105,105));
+                    musteriEkle.setSize(150,32);
+                    musteriEkle.setForeground(Color.black);
+                    musteriEkle.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    musteriEkle.setBackground(Color.WHITE);
+                    musteriEkle.setForeground(Color.BLACK);
+                    musteriEkle.setSize(150,30);
+                    musteriEkle.setBorderPainted(true);
+
+                }
+            });
             this.musteriEkle.addActionListener(new PersonelGUIAction(this));
         }
         return musteriEkle;

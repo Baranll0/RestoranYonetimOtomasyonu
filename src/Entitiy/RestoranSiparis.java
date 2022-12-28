@@ -9,8 +9,13 @@ public class RestoranSiparis extends Siparis implements Serializable {
 
     public RestoranSiparis(int masaNo)
     {
+        super();
         this.masaNo=masaNo;
-        this.rezervasyonSiparisi= (new Rezervasyon());
+        this.rezervasyonSiparisi= (new Rezervasyon());//Composition
+        //Burada Composition var çünkü Rezervasyon olmadan rezervasyonun Siparişi olması mümkün değil.
+        //Dolayısıyla başka bir yöntem kullanarak constructor içinde newleyebiliriz.
+        //Böylelikle Rezervasyon olmadan Rezervasyona Sipariş var olamayacaktır.
+
     }
     public RestoranSiparis(Date siparisTarihi,String siparisDetay,String ekstraNot,int masaNo)
     {

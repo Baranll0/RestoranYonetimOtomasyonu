@@ -13,7 +13,7 @@ public class OnlineOdeme extends Siparis{
 
     }
     public OnlineOdeme(int siparisID, Date siparisTarihi, String siparisDetay, String ekstraNot, String odemeSekli, String tarafindan) {
-        super(siparisID, siparisTarihi, siparisDetay, ekstraNot);
+        super();
         this.odemeSekli = odemeSekli;
         this.tarafindan = tarafindan;
     }

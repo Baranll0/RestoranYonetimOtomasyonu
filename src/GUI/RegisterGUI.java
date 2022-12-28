@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.net.http.HttpHeaders;
 
 public class RegisterGUI{
@@ -82,6 +84,26 @@ public class RegisterGUI{
             girisYap=new JButton("Giris Yap");
             girisYap.setBounds(230,350,100,20);
             girisYap.setFont(new Font("Arial",Font.BOLD,12));
+            girisYap.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            girisYap.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    girisYap.setBackground(new Color(240, 230, 140));
+                    girisYap.setForeground(new Color(105,105,105));
+                    girisYap.setSize(100,22);
+                    girisYap.setForeground(Color.black);
+                    girisYap.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    girisYap.setBackground(Color.WHITE);
+                    girisYap.setForeground(Color.BLACK);
+                    girisYap.setSize(100,20);
+                    girisYap.setBorderPainted(true);
+
+                }
+            });
             this.girisYap.addActionListener(new RegisterGUIAction(this));
         }
         return girisYap;
@@ -96,6 +118,26 @@ public class RegisterGUI{
         {
             kayitOl=new JButton("Kayit ol");
             kayitOl.setBounds(400,350,100,20);
+            kayitOl.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            kayitOl.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    kayitOl.setBackground(new Color(240, 230, 140));
+                    kayitOl.setForeground(new Color(105,105,105));
+                    kayitOl.setSize(100,22);
+                    kayitOl.setForeground(Color.black);
+                    kayitOl.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    kayitOl.setBackground(Color.WHITE);
+                    kayitOl.setForeground(Color.BLACK);
+                    kayitOl.setSize(100,20);
+                    kayitOl.setBorderPainted(true);
+
+                }
+            });
             this.getKayitOl().addActionListener(new RegisterGUIAction(this));
         }
         return kayitOl;

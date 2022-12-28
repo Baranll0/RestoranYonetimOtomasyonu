@@ -6,15 +6,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Musteri extends Kisi implements Serializable {
-    Siparis siparis=new Siparis();//Composition
     private Date kayitTarihi;
     private ArrayList<Siparis> siparises;
     private String krediKartDetay;
     private ArrayList<Rezervasyon> rezervasyons;
-    public Musteri()
-    {
-
-    }
+    private Siparis siparis;//Composition
+    //Burada Composition olduğundan
+    //Müşteri sınıfının boş constructoru olmamalı
+    //Bu yüzden Sipariş sınıfı olmadan Müşteri sınıfı, Müşteri sınıfı olmadan Sipariş sınıfı var olamayacaktır.
     public Musteri(int ID, String name, Date dogumTarihi, String cinsiyet, Date kayitTarihi, ArrayList<Siparis> siparises, String krediKartDetay, ArrayList<Rezervasyon> rezervasyons) {
         super();
         this.kayitTarihi = kayitTarihi;

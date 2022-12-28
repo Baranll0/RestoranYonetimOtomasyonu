@@ -14,7 +14,7 @@ public class YoneticiLoginGUIAction implements ActionListener {
 
     public YoneticiLoginGUIAction(YoneticiLoginGUI yoneticiLoginGUI)
     {
-        this.yoneticiLoginGUI=new YoneticiLoginGUI();
+        this.yoneticiLoginGUI=yoneticiLoginGUI;
     }
     @Override
     public void actionPerformed(ActionEvent e) {

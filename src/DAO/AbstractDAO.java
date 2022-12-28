@@ -31,7 +31,6 @@ public class AbstractDAO {
         String Filename = "Siparis";
         LoginGui loginGui=new LoginGui();
         loginGui.getWindow().setVisible(false);
-        System.out.println(loginGui.getUserT().getText()+loginGui.getPasswordT().getText()+yemekAdi+fiyat+adet);
         File f = new File(Filename);
         if (!f.exists()) {
             f.createNewFile();
@@ -99,11 +98,11 @@ public class AbstractDAO {
     }
     public void save(String username,String password)throws IOException
     {
-        String Filename = "Yonetici";
-        File f = new File(Filename);
+
+        File f = new File(".\\Yonetici");
         if (!f.exists()) {
             f.createNewFile();
-            System.out.println("Dosya olusturuldu. " + Filename);
+            System.out.println("Dosya olusturuldu. ");
         } else {
             FileWriter fw = null;
             fw = new FileWriter(f, true);
@@ -219,6 +218,7 @@ public class AbstractDAO {
                 String pass=bilgiler[2];
                 if (user.equals(username)&&pass.equals(password))
                 {
+
                     return 1;
                 }
 
@@ -272,7 +272,7 @@ public class AbstractDAO {
                 String user=bilgiler[2];
                 String sifre=bilgiler[3];
                 String mail=bilgiler[4];
-                System.out.println(user+password);
+
                 if (user.equals(username)&&sifre.equals(password))
                 {
                     return 1;

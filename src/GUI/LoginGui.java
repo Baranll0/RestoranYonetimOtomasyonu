@@ -1,9 +1,13 @@
 package GUI;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 public class LoginGui{
     RegisterGUI registerGUI;
     private ImageIcon image;
@@ -65,6 +69,27 @@ public class LoginGui{
             girisYap=new JButton("Giriş Yap");
             girisYap.setBounds(280,350,100,20);
             girisYap.setFont(new Font("Arial",Font.BOLD,12));
+            girisYap.setBackground(Color.white);
+            girisYap.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            girisYap.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    girisYap.setBackground(new Color(240, 230, 140));
+                    girisYap.setForeground(new Color(105,105,105));
+                    girisYap.setSize(100,22);
+                    girisYap.setForeground(Color.black);
+                    girisYap.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    girisYap.setBackground(Color.WHITE);
+                    girisYap.setForeground(Color.BLACK);
+                    girisYap.setSize(100,20);
+                    girisYap.setBorderPainted(true);
+
+                }
+            });
             this.getGirisYap().addActionListener(new LoginGuiAction(this));
 
         }
@@ -78,6 +103,27 @@ public class LoginGui{
         {
             kayitOl=new JButton("Kayit ol");
             kayitOl.setBounds(450,350,100,20);
+            kayitOl.setBackground(Color.white);
+            kayitOl.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            kayitOl.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    kayitOl.setBackground(new Color(240, 230, 140));
+                    kayitOl.setForeground(new Color(105,105,105));
+                    kayitOl.setSize(100,22);
+                    kayitOl.setForeground(Color.black);
+                    kayitOl.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    kayitOl.setBackground(Color.WHITE);
+                    kayitOl.setForeground(Color.BLACK);
+                    kayitOl.setSize(100,20);
+                    kayitOl.setBorderPainted(true);
+
+                }
+            });
 
             this.getKayitOl().addActionListener(new LoginGuiAction(this));
         }

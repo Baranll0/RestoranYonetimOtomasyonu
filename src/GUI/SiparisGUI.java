@@ -2,6 +2,8 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -544,6 +546,26 @@ public class SiparisGUI{
         {
             this.Siparisekle=new JButton("Sipariş Ekle");
             this.Siparisekle.setBounds(600,470,130,30);
+            Siparisekle.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            Siparisekle.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    Siparisekle.setBackground(new Color(240, 230, 140));
+                    Siparisekle.setForeground(new Color(105,105,105));
+                    Siparisekle.setSize(130,32);
+                    Siparisekle.setForeground(Color.black);
+                    Siparisekle.setMargin(new Insets(0,0,0,0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    Siparisekle.setBackground(Color.WHITE);
+                    Siparisekle.setForeground(Color.BLACK);
+                    Siparisekle.setSize(130,30);
+                    Siparisekle.setBorderPainted(true);
+
+                }
+            });
             this.getSiparisekle().addActionListener(new SiparisGUIAction(this));
         }
         return Siparisekle;
