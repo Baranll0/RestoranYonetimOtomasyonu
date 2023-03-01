@@ -1,7 +1,7 @@
-﻿<h1>RESTAURANT MANAGEMENT<br>AUTOMATİON APPLICATION</h1>
+<h1>RESTAURANT MANAGEMENT<br>AUTOMATİON APPLICATION</h1>
+﻿<img src="https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif" align="right">
 <h2>Project Goal:</h2>
-<pre><p>    The aim of the project is to create a graphical user interface for the application and store data. 
-    The graphical user interface has an interactive effect of all methods given in the RestorantApplication class. 
+<pre align="left"><p>    The aim of the project is to create a graphical user interface for <br>    the application and store data.The graphical user interface has an<br>    interactive effect of all methods given in the RestorantApplication class. 
     Swing(JFrame,JButton,JLabel, etc.) is used to implement the user interface.</p>
 <hr>
 
@@ -34,6 +34,7 @@
     abstractions.</p>
 <hr>
 </pre>
+<img src="https://media.giphy.com/media/dXdJm33mA9WarE7Fcg/giphy-downsized.gif" align="right">
 <h2>Tech I use: </h2>
 <img align="left" src="https://raw.githubusercontent.com/github/explore/5b3600551e122a3277c2c5368af2ad5725ffa9a1/topics/java/java.png" width="50" height="50">
 <img align="left" src="https://raw.githubusercontent.com/github/explore/837a7c42714572f343238a9110f2aa7ccebf9ea5/topics/swing/swing.png" width="50" height="50">
